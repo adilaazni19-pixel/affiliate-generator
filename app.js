@@ -31,15 +31,7 @@ document.getElementById("benefits").value =
 }
 
 async function generatePost(){
-const data = await response.json();
 
-if(data.error){
-  alert(data.error);
-  return;
-}
-
-document.getElementById("output").value =
-data.content || "Tiada output";
 const productName =
 document.getElementById("productName").value;
 
@@ -48,8 +40,10 @@ document.getElementById("benefits").value;
 
 const contentType =
 document.getElementById("contentType").value;
+
 const style =
 document.getElementById("style").value;
+
 const aiModel =
 document.getElementById("aiModel").value;
 
@@ -75,7 +69,12 @@ aiModel
 const data =
 await response.json();
 
+if(data.error){
+alert(data.error);
+return;
+}
+
 document.getElementById("output").value =
-data.content;
+data.content || "Tiada output";
 
 }
