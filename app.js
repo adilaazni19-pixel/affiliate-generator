@@ -48,7 +48,8 @@ document.getElementById("benefits").value;
 
 const contentType =
 document.getElementById("contentType").value;
-
+const style =
+document.getElementById("style").value;
 const aiModel =
 document.getElementById("aiModel").value;
 
