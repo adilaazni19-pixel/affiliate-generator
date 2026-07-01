@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Content Generator</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+background:#0f172a;
+color:white;
+}
+
+.card{
+background:#1e293b;
+border:1px solid #334155;
+}
+</style>
+
+</head>
+
+<body class="p-5">
+
+<div class="max-w-3xl mx-auto">
+
+<h1 class="text-3xl font-bold text-center mb-6">
+Affiliate Content Generator
+</h1>
+
+<div class="card rounded-xl p-4">
+
+<label>Link Shopee / TikTok</label>
+
+<input
+id="productLink"
+class="w-full mt-2 p-3 rounded bg-slate-800"
+placeholder="Paste link produk">
+
+<button
+onclick="analyzeProduct()"
+class="w-full mt-4 bg-blue-600 p-3 rounded">
+Tarik Info Produk
+</button>
+
+</div>
+
+<div class="card rounded-xl p-4 mt-4">
+
+<div class="flex justify-between">
+<label>Nama Produk</label>
+<button onclick="clearField('productName')">✕</button>
+</div>
+
+<input
+id="productName"
+class="w-full mt-2 p-3 rounded bg-slate-800">
+
+<div class="flex justify-between mt-4">
+<label>Kelebihan Produk</label>
+<button onclick="clearField('benefits')">✕</button>
+</div>
+
+<textarea
+id="benefits"
+rows="5"
+class="w-full mt-2 p-3 rounded bg-slate-800">
+</textarea>
+
+</div>
+
+<div class="card rounded-xl p-4 mt-4">
+
+<label>Jenis Kandungan</label>
+
+<select
+id="contentType"
+class="w-full mt-2 p-3 rounded bg-slate-800">
+
+<option>Threads</option>
+<option>TikTok Caption</option>
+<option>Facebook Post</option>
+
+</select>
+
+<label class="mt-4 block">
+Model AI
+</label>
+
+<select
+id="aiModel"
+class="w-full mt-2 p-3 rounded bg-slate-800">
+
+<option value="gemini">
+Gemini
+</option>
+
+<option value="claude">
+Claude
+</option>
+
+</select>
+
+<button
+onclick="generatePost()"
+class="w-full mt-4 bg-green-600 p-3 rounded font-bold">
+
+JANA POSTING
+
+</button>
+
+</div>
+
+<div class="card rounded-xl p-4 mt-4">
+
+<div class="flex justify-between">
+
+<h2>Output</h2>
+
+<button onclick="clearOutput()">
+✕
+</button>
+
+</div>
+
+<textarea
+id="output"
+rows="12"
+class="w-full mt-2 p-3 rounded bg-slate-800">
+</textarea>
+
+<button
+onclick="copyOutput()"
+class="w-full mt-4 bg-purple-600 p-3 rounded">
+
+Copy
+
+</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
