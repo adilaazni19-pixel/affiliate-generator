@@ -31,7 +31,15 @@ document.getElementById("benefits").value =
 }
 
 async function generatePost(){
+const data = await response.json();
 
+if(data.error){
+  alert(data.error);
+  return;
+}
+
+document.getElementById("output").value =
+data.content || "Tiada output";
 const productName =
 document.getElementById("productName").value;
 
