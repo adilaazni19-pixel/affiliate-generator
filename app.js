@@ -66,6 +66,7 @@ body:JSON.stringify({
 productName,
 benefits,
 contentType,
+style,
 aiModel
 })
 
