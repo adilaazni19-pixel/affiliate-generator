@@ -1,3 +1,4 @@
+alert("app.js loaded");
 function clearField(id){
 document.getElementById(id).value="";
 }
