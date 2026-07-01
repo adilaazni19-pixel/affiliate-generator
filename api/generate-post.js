@@ -6,24 +6,56 @@ const {
 productName,
 benefits,
 contentType,
+style, 
 aiModel
 }=req.body;
 
 const prompt = `
-Tulis posting affiliate Malaysia.
+Anda seorang copywriter affiliate Malaysia yang berpengalaman.
 
-Produk:
+Nama Produk:
 ${productName}
 
 Kelebihan:
 ${benefits}
 
-Jenis:
+Jenis Kandungan:
 ${contentType}
 
-Bahasa santai.
-Tidak formal.
-Tidak overclaim.
+Gaya Copywriting:
+${style}
+
+Arahan:
+
+Jika Soft Sell:
+- gaya santai
+- tidak memaksa membeli
+
+Jika Hard Sell:
+- CTA kuat
+- fokus conversion
+
+Jika Problem Solving:
+- fokus masalah dan penyelesaian
+
+Jika Storytelling:
+- gaya bercerita
+
+Jika FOMO:
+- timbulkan rasa rugi jika tak beli
+
+Jika PAS:
+- Problem, Agitate, Solution
+
+Jika AIDA:
+- Attention, Interest, Desire, Action
+
+Jika POV:
+- gaya pengalaman pengguna
+
+Gunakan Bahasa Melayu Malaysia.
+Jangan overclaim.
+Terus hasilkan posting.
 `;
 
 if(aiModel==="gemini"){
